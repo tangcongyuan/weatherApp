@@ -13,9 +13,9 @@ The page is displaying a custom Form, and will be validated by Django at the bac
 After user inputs been validated, the data will be stored in DB(sqlite).
 
 ## Constraints from Model
-We have a subscriber Model, which has 3 fields. Two of them are minimum, the email_address and the location of the subscriber, 
-but I've added a third advertisedDate to record the last time our email has been sent to that subscriber. This field can also be 
-used when we invoke the custome Django command.
+We have a subscriber Model, which has 3 fields. Two of them are minimum, the email_address and the location of the subscriber, but I've added a third advertisedDate to record the last time our email has been sent to that subscriber. This field can also be used when we invoke the custome Django command.
+
+The subscriber Model not only check the correctness of the email address, but also prevents duplicated email_addresses as it is marked 'unique'. The presence of both email_address and location are required when validation happens.
 
 ## sendemails Command
 This is a custom Django command which takes optional one argument, from_date, and tried to send emails to all subscribers who not 
