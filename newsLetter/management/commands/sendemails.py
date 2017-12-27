@@ -18,9 +18,11 @@ class Command(BaseCommand):
         except:
             from_date = None
 
-        sendEmailFromDate(from_date)
-
-        self.stdout.write(self.style.SUCCESS('Successfully sent emails to all subscribers'))
+        try:
+            sendEmailFromDate(from_date)
+            self.stdout.write(self.style.SUCCESS('Successfully sent emails to all subscribers'))
+        except:
+            self.stdout.write(self.style.SUCCESS('Some email(s) failed to be sent to subscribers'))
 
 def sendEmailFromDate(from_date):
     subscribers = None
@@ -46,7 +48,7 @@ def sendEmailFromDate(from_date):
             # Update advertisedDate accordingly
         except:
             # Error handling logic
-            pass
+            raise Exception
 
 
 def getSubject(location, currentTmpCache, avgTmpCache, weatherCache):
