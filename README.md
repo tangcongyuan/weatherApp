@@ -34,3 +34,14 @@ Email functionality is not working on Heroku, cause I didn't pay;)
 Admin user: klaviyo
 
 password: erictang
+
+## Send email to all
+A custom Django command is created to send emails to all subscribers:
+
+```
+python manage.py sendemails --from_date
+```
+
+It will count the number of failed emails, if no emails failed, it will display the pleasing 'Successfully sent emails to all subscribers' after the command is executed.
+
+Again, the email feature only works on my local env, because the password that's used to send the email only exists in my local env.
