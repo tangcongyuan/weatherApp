@@ -129,6 +129,7 @@ EMAIL_HOST_PASSWORD = os.environ['GmailPW']
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'tangcongyuan@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+print os.environ['GmailPW']
 #########################################################################
 
 # For Heroku deployment #################################################
