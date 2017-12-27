@@ -122,14 +122,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Mail server related config ############################################
-
-with open(os.path.join(BASE_DIR, "password.txt"), 'r') as f:
-    password = f.read()
-
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'tangcongyuan@gmail.com'
-EMAIL_HOST_PASSWORD = password
+EMAIL_HOST_PASSWORD = os.environ['GmailPW']
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'tangcongyuan@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
