@@ -1,5 +1,4 @@
 db.sqlite3
-password.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
