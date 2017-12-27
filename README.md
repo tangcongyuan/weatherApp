@@ -28,7 +28,9 @@ If anything happens during the API call or parsing values, the email will not be
 
 ## Live demo
 The site is deployed to [Heroku](https://klaviyo.herokuapp.com/)
+
 Email functionality is not working on Heroku, cause I didn't pay;)
 
 Admin user: klaviyo
+
 password: erictang
