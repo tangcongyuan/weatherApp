@@ -35,14 +35,13 @@ def sendEmailFromDate(from_date):
             message = "This part is intentionally left blank."
             from_email = "tangcongyuan@gmail.com"
 
-            # send_mail(
-            #     subject,
-            #     message,
-            #     from_email,
-            #     [subscriber.email_address],
-            #     fail_silently=False,
-            # )
-            print subject
+            send_mail(
+                subject,
+                message,
+                from_email,
+                [subscriber.email_address],
+                fail_silently=False,
+            )
 
             # Update advertisedDate accordingly
         except:
